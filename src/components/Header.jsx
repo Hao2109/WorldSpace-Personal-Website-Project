@@ -18,6 +18,16 @@ const Header = () => {
                 Capsules
               </Link>
             </li>
+            <li>
+              <Link to="/cores" className="text-white text-sm">
+                Cores
+              </Link>
+            </li>
+            <li>
+              <Link to="/crew" className="text-white text-sm">
+                Crew
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
