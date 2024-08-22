@@ -7,6 +7,8 @@ import Capsules from "./pages/Capsules";
 import Cores from "./pages/Cores";
 import Crew from "./pages/Crew";
 import SingleCrew from "./pages/SingleCrew";
+import Dragon from "./pages/Dragon";
+import SingleDragon from "./pages/SingleDragon";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/cores" element={<Cores />}></Route>
           <Route path="/crew" element={<Crew />}></Route>
           <Route path="/crew/:id" element={<SingleCrew />}></Route>
+          <Route path="/dragons" element={<Dragon />}></Route>
+          <Route path="/dragons/:id" element={<SingleDragon />}></Route>
           <Route path="*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>

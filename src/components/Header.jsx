@@ -28,6 +28,11 @@ const Header = () => {
                 Crew
               </Link>
             </li>
+            <li>
+              <Link to="/dragons" className="text-white text-sm">
+                Dragons
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>

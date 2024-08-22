@@ -20,8 +20,8 @@ img {
   @apply text-white font-bold text-4xl md:text-5xl xl:text-xl;
 }
 p {
-  line-height: 1.8;
   @apply text-sm;
+  line-height: 1.8;
 }
 .showcase {
   background: url("./bg-image4.webp") no-repeat center / cover;
