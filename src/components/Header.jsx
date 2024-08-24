@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { GiWorld } from "react-icons/gi";
 
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState();
   return (
     <>
       <header className="absolute flex items-center justify-between px-5 w-full">
@@ -11,7 +13,7 @@ const Header = () => {
             <GiWorld className="text-4xl text-white" />
           </Link>
         </div>
-        <nav>
+        <nav className={`${isOpen ? "open" : ""}`}>
           <ul>
             <li>
               <Link to="/capsules" className="text-white text-sm">
@@ -33,8 +35,41 @@ const Header = () => {
                 Dragons
               </Link>
             </li>
+            <li>
+              <Link to="/launches" className="text-white text-sm">
+                Launches
+              </Link>
+            </li>
+            <li>
+              <Link to="/roadster" className="text-white text-sm">
+                Roadster
+              </Link>
+            </li>
+            <li>
+              <Link to="/rockets" className="text-white text-sm">
+                Rockets
+              </Link>
+            </li>
+            <li>
+              <Link to="/ships" className="text-white text-sm">
+                Ships
+              </Link>
+            </li>
+            <li>
+              <Link to="/starlink" className="text-white text-sm">
+                Starlink
+              </Link>
+            </li>
           </ul>
         </nav>
+        <div className="lg:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-white text-sm uppercase tracking-wider"
+          >
+            {isOpen ? "Close" : " Menu"}
+          </button>
+        </div>
       </header>
     </>
   );

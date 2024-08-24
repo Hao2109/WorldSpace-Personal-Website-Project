@@ -29,20 +29,25 @@ const HomePage = () => {
                 <h2 className="font-bold border-b-2 border-white text-xl mb-3 pb-2 uppercase tracking-wider">
                   About
                 </h2>
-                <ul className="text-sm opacity-75">
+                <ul className="text-sm opacity-75 text-justify">
                   <li className="mb-1">{company.name} was founded by</li>
-                  <li className="mb-1">{company.founder} in the year</li>
-                  <li className="mb-1">{company.founded}.</li>
+                  <li className="mb-1">
+                    {company.founder} in the year {company.founded}.
+                  </li>
+
                   <li className="mb-1">
                     It has {company.employees} employees,
                   </li>
-                  <li className="mb-1">{company.vehicles} vehicels,</li>
-                  <li className="mb-1">{company.launch_sites} launch sites,</li>
+                  <li className="mb-1">
+                    {company.vehicles} vehicels, {company.launch_sites} launch
+                    sites,
+                  </li>
+
                   <li className="mb-1">
                     and {company.test_sites} test sites and
                   </li>
 
-                  <li> is valued at {company.valuation.toLocaleString()} B</li>
+                  <li> is valued at {company.valuation.toLocaleString()}B</li>
                 </ul>
               </article>
               <article>
@@ -60,7 +65,7 @@ const HomePage = () => {
                   Useful LInks
                 </h2>
                 <ul className="text-sm opacity-75">
-                  <li className="mb-1">
+                  <li className="mb-1 ">
                     <a href={company.links.website}>Website</a>
                   </li>
                   <li className="mb-1">

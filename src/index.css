@@ -23,13 +23,40 @@ p {
   @apply text-sm;
   line-height: 1.8;
 }
+nav {
+  @apply absolute bg-stone-900 shadow shadow-cyan-200 w-full left-0  right-0 p-5 z-50 duration-200 lg:relative lg:bg-transparent lg:shadow-none lg:p-0 lg:z-auto lg:w-auto;
+  top: -100vh;
+}
+@media (min-width: 1024px) {
+  .showcase,
+  .showcase .overlay {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    top: 0;
+  }
+  nav .open {
+    top: 6rem;
+  }
+}
+nav ul {
+  @apply lg:flex lg:items-center lg:justify-center lg:gap-3;
+}
+nav ul li {
+  @apply mb-3 lg:mb-0;
+}
 .showcase {
   background: url("./bg-image4.webp") no-repeat center / cover;
-  height: calc (100vh - 0.1px);
 }
 .showcase .overlay {
   background-color: rgba(0, 0, 0, 0.3);
-  height: calc(100vh - 0.1px);
+  padding: 8rem 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .articles {
   @apply bg-stone-900 p-5 rounded-lg shadow shadow-zinc-800 text-white text-sm;
