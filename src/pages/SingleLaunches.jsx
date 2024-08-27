@@ -20,7 +20,7 @@ export default function SingleLaunches() {
       {!singleLaunch ? (
         <LoadingState />
       ) : (
-        <section className="py-32 max-width grid grid-cols-1 gap-10 md:grid-cols-2   ">
+        <section className="py-32 max-width grid grid-cols-1 gap-10 md:grid-cols-2   px-5  ">
           <article>
             {singleLaunch.links.patch.large ? (
               <img

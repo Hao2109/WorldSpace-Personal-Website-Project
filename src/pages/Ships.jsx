@@ -10,18 +10,22 @@ const Ships = () => {
         <LoadingState />
       ) : (
         <section className="py-32 max-width">
-          <h1 className="heading text-center mb-10"></h1>
+          <h1 className="heading text-center mb-10 uppercase">Ships</h1>
           <div className=" max-width grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 px-5">
             {data.map(({ id, image, name, home_port }) => (
               <Link to={`/ships/${id}`} key={id}>
-                <article className="bg-zinc-900">
+                <article className="bg-zinc-900 overflow-hidden">
                   {image ? (
-                    <img src={image} alt={name} className="h-64 object-cover" />
+                    <img
+                      src={image}
+                      alt={name}
+                      className="h-64 object-cover transition-transform duration-300 ease-in-out hover:scale-110 "
+                    />
                   ) : (
                     <img
                       src="https://i.imgur.com/woCxpkj.jpg"
                       alt={name}
-                      className="h-64 object-cover"
+                      className="h-64 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                     />
                   )}
                   <div className="p-5 ">

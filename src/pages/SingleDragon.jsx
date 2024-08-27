@@ -20,9 +20,9 @@ const SingleDragon = () => {
       {!singleDragon ? (
         <LoadingState />
       ) : (
-        <section className="py-32 max-width flex flex-col-reverse md:grid md:grid-cols-2 md:gap-10">
+        <section className="py-32 max-width flex flex-col-reverse md:grid md:grid-cols-2 md:gap-10  px-5">
           <article className="mt-8 md:mt-0">
-            <h1 className="heading mb-8">{singleDragon.name}</h1>
+            <h1 className="text-4xl text-white mb-8">{singleDragon.name}</h1>
             <h2 className="font-bold opacity-80 text-lg lg:text-2xl mb-10 text-white">
               First Fight Date: {singleDragon.first_flight}
             </h2>
@@ -82,11 +82,11 @@ const SingleDragon = () => {
                     Return Payload Mass: {singleDragon.return_payload_mass.kg}kg
                   </li>
                   <li>
-                    Pressurized Capsule Payload Volume:
+                    Pressurized Capsule Payload Volume: <br />
                     {
                       singleDragon.pressurized_capsule.payload_volume
                         .cubic_meters
-                    }{" "}
+                    }
                     m<sup>3</sup>
                   </li>
                   <li>

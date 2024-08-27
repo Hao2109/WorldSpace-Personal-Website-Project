@@ -1,19 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: Inter, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  @apply bg-gradient-to-br from-stone-900   to-slate-900;
+  @apply font-title;
+  background: black;
+  /* @apply bg-gradient-to-br from-stone-900   to-slate-900; */
 }
 .btn {
-  @apply px-8 py-2 border-white border-2 bg-transparent text-white hover:opacity-75 transition-all duration-200;
+  @apply px-8 py-2 border-white border-2 bg-transparent text-white hover:opacity-75 transition-all duration-200 rounded-lg;
 }
+[data-aos] {
+  pointer-events: auto;
+}
+
 img {
   max-width: 100%;
   width: 100%;
+}
+.no-underline-active {
+  text-decoration-line: none;
+}
+
+.active {
+  /* Sửa thành 'color' thay vì 'text-color' */
+
+  text-decoration-line: underline;
 }
 
 .heading {
@@ -26,6 +39,7 @@ p {
 nav {
   @apply absolute bg-stone-900 shadow shadow-cyan-200 w-full left-0  right-0 p-5 z-50 duration-200 lg:relative lg:bg-transparent lg:shadow-none lg:p-0 lg:z-auto lg:w-auto;
   top: -100vh;
+  z-index: 1000;
 }
 @media (min-width: 1024px) {
   .showcase,
@@ -38,9 +52,9 @@ nav {
   nav {
     top: 0;
   }
-  nav .open {
+  /* nav .open {
     top: 6rem;
-  }
+  } */
 }
 nav ul {
   @apply lg:flex lg:items-center lg:justify-center lg:gap-3;
@@ -59,7 +73,7 @@ nav ul li {
   justify-content: center;
 }
 .articles {
-  @apply bg-stone-900 p-5 rounded-lg shadow shadow-zinc-800 text-white text-sm;
+  @apply p-5 rounded-lg  text-white text-sm;
 }
 .max-width {
   @apply max-w-6xl mx-auto;

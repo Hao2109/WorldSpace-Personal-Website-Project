@@ -4,8 +4,7 @@ import { useParams } from "react-router-dom";
 import LoadingState from "../components/LoadingState";
 const SingleShip = () => {
   const [singleShip, setSingleShip] = useState(null);
-  const [imperial, setImperial] = useState(false);
-  const [value, setValue] = useState(0);
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -21,7 +20,7 @@ const SingleShip = () => {
       {!singleShip ? (
         <LoadingState />
       ) : (
-        <section className="py-32 max-width grid grid-cols-2 gap-8 md:grid-cols-2 ">
+        <section className="py-32 max-width grid grid-cols-1 gap-8 md:grid-cols-2 px-5">
           <article>
             <h1 className="heading">{singleShip.name}</h1>
             {singleShip.year_built ? (

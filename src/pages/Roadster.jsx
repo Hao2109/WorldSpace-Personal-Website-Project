@@ -11,8 +11,13 @@ const Roadster = () => {
       {!data ? (
         <LoadingState />
       ) : (
-        <section className="py-32 max-width">
-          <h1 className="heading text-center mb-10">
+        <section
+          className="py-32 max-width"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <h1 className="heading text-center mb-10 uppercase">
             Elon Musk's Tesla Roadster
           </h1>
           <div>
@@ -43,7 +48,7 @@ const Roadster = () => {
                   {/* image  */}
                 </ul>
               </div>
-              <div>
+              <div className="p-2">
                 <p className="text-white text-sm opacity-75">{data.details}</p>
                 <ul className="text-white opacity-75 text-sm mt-5 grid grid-cols-1 gap-3 md:grid-cols-2 ">
                   <li>

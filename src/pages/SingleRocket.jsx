@@ -23,7 +23,7 @@ const SingleRocket = () => {
       {!singleRocket ? (
         <LoadingState />
       ) : (
-        <section className="py-32 max-width grid grid-cols-1 gap-8 md:grid-cols-2">
+        <section className="py-32 max-width grid grid-cols-1 gap-8 md:grid-cols-2 px-5">
           <article>
             <h1 className="heading">{singleRocket.name}</h1>
             <h2 className="capitalize text-3xl opacity-75 mt-2 text-white font-bold">

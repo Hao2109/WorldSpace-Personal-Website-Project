@@ -11,20 +11,21 @@ const Dragon = () => {
     };
     fetchDragon();
   }, []);
+
   return (
     <>
-      <section className="py-32">
-        <h1 className="heading text-center mb-10"></h1>
+      <section className="py-32" data-aos="fade-up">
+        <h1 className="heading text-center mb-10 uppercase">Dragons</h1>
         <div className=" max-width grid grid-cols-1 gap-5 md:grid-cols-2">
           {dragon.map(({ id, name, flickr_images, description }) => (
             <Link to={`/dragons/${id}`} key={id}>
-              <article>
+              <article className="overflow-hidden">
                 <img
                   src={flickr_images[1]}
                   alt={name}
-                  className="h-96 object-cover"
+                  className="h-96 object-cover transition-transform duration-300 ease-in-out hover:scale-110 p-2"
                 />
-                <div className="bg-zinc-900 p-5">
+                <div className=" p-5">
                   <h2 className="text-white text-lg pt-5 mb-3 font-bold tracking-wide">
                     {name}
                   </h2>

@@ -18,7 +18,7 @@ const HomePage = () => {
 
   return (
     <>
-      <section className="showcase">
+      <section className="showcase" data-aos="zoom-in-up">
         <div className="overlay flex justify-center items-center">
           <article>
             <h1 className=" text-center capitalize text-5xl text-white">
